@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import Level1 from "./pages/Level1";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="level1" element={<Level1 />} />
         </Route>
       </Routes>
     </BrowserRouter>
