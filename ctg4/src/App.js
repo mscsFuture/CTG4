@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Level1 from "./pages/Level1";
+import Level1 from "./level1/Level1";
 
 export default function App() {
   return (
