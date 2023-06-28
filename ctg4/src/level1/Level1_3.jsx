@@ -9,7 +9,7 @@ const handleSubmit = (event) =>{
     }
     else{
         alert("Correct! +1 point");
-        window.location.href = "/Level1_2";
+        window.location.href = "/Level1_4";
     }
     
 }
@@ -19,9 +19,9 @@ const Level1 = () => {
 
     return(
         <div>
-            <h1>Level 1-1</h1>
+            <h1>Level 1-3</h1>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
-                        <img src="../images/octagon/octa1_easy.png" alt="MUCS logo" width="300" height="250"/>
+                        <img src="../images/squares/square2_easy.png" alt="MUCS logo" width="300" height="250"/>
                 </div>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
                     <form onSubmit={handleSubmit}>
