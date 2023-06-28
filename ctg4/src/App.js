@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Level1 from "./level1/Level1";
+import Level1 from "./level1/Level1_1";
 
 export default function App() {
   return (
@@ -19,5 +19,5 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
