@@ -3,7 +3,14 @@ import ReactDOM from "react-dom";
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    alert("You submitted the form!");
+    if(event.target.answer.value != 20){
+        alert("Please try again!");
+    }
+    else{
+        alert("Correct! +1 point");
+        this.setState({isCorrect: true});
+    }
+    
 }
 const Level1 = () => {
     return(
@@ -17,9 +24,11 @@ const Level1 = () => {
                         <label>
                             <label style={{padding: 10}}>Perimeter:</label>
                              
-                            <input type="text" name="Perimeter" />
+                            <input type="text" name="answer" />
                         </label>
                         <input type="submit" value="Submit" />
+                        <br/>
+                        <button type="button" class="btn btn-outline-success" disabled = {!isCorrect}></button>
                     </form>
                 </div>
         </div>
