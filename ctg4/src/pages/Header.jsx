@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  var points = 0;
   return (
     
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,6 +37,7 @@ const Header = () => {
               <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
           */}
+          <div>Score: {points}</div>
           </div>
         </div>
       </nav>
