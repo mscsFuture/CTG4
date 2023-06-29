@@ -1,14 +1,16 @@
 import react, { setState, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import Header from "../pages/Header";
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    if(event.target.answer.value != 8){
+    if(event.target.answer.value !== 8){
         alert("Please try again!");
     }
     else{
         alert("Correct! +1 point");
+        Header.points += 1;
         window.location.href = "/Level1_2";
     }
     

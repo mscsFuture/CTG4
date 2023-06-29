@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    if(event.target.answer.value != 165){
+    if(event.target.answer.value !== 165){
         alert("Please try again!");
     }
     else{

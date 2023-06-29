@@ -13,6 +13,7 @@ const Home = () => {
                                     <Link to="/level1" className="btn btn-outline-success ">Level 1</Link>
                                     <Link to="/level2" className="btn btn-outline-success ">Level 2</Link>
                                     <Link to="/level3" className="btn btn-outline-success ">Level 3</Link>
+                                    <Link to="/city" className="btn btn-outline-success ">City</Link>
                                 </div>
                             </div>
                         </div>
