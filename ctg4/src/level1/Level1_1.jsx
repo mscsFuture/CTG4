@@ -5,7 +5,7 @@ import Header from "../pages/Header";
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    if(event.target.answer.value !== 8){
+    if(event.target.answer.value != 8){
         alert("Please try again!");
     }
     else{
