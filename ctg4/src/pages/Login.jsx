@@ -4,17 +4,15 @@ import Form from "react-bootstrap/Form";
 
 import Button from "react-bootstrap/Button";
 
-import "./Login.css";
+import "../Login.css";
 
 export default function Login() {
 
-  const [email, setEmail] = useState("");
-
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState("");
 
   function validateForm() {
 
-    return email.length > 0 && password.length > 0;
+    return user.length > 0;
 
   }
 
@@ -26,7 +24,7 @@ export default function Login() {
 
   return (
 
-    <div className="Login">
+    <div className="form-box">
 
       <Form onSubmit={handleSubmit}>
 
@@ -38,39 +36,32 @@ export default function Login() {
 
             autoFocus
 
-            type="email"
+            type="username"
 
-            value={email}
+            value={user}
 
-            onChange={(e) => setEmail(e.target.value)}
-
-          />
-
-        </Form.Group>
-
-        <Form.Group size="lg" controlId="password">
-
-          <Form.Label>Password</Form.Label>
-
-          <Form.Control
-~
-            type="password"
-
-            value={password}
-
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setUser(e.target.value)}
 
           />
 
         </Form.Group>
 
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <Button className='Btn' block size="lg" type="submit" disabled={!validateForm()}>
 
           Login
 
         </Button>
-
+        
       </Form>
+
+      <a href="/register">
+        <Button className='redir' block size="lg">
+        
+            Register
+        
+        </Button>
+        </a>
+
 
     </div>
 

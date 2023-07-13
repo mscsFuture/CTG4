@@ -17,7 +17,7 @@ import Level32 from "./level3/Level3_2";
 import Level33 from "./level3/Level3_3";
 import Level34 from "./level3/Level3_4";
 import Level35 from "./level3/Level3_5";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 
 
 export default function App() {
