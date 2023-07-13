@@ -18,6 +18,7 @@ import Level33 from "./level3/Level3_3";
 import Level34 from "./level3/Level3_4";
 import Level35 from "./level3/Level3_5";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="level3_4" element={<Level34 />} />
         <Route path="level3_5" element={<Level35 />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>

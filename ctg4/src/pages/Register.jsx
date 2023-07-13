@@ -10,9 +10,11 @@ export default function Login() {
 
   const [user, setUser] = useState("");
 
+  const [classCode, setClassCode] = useState("");
+
   function validateForm() {
 
-    return user.length > 0;
+    return user.length > 0 && classCode.length > 0;
 
   }
 
@@ -28,7 +30,7 @@ export default function Login() {
 
       <Form onSubmit={handleSubmit}>
 
-        <Form.Group size="lg" controlId="classCode">
+        <Form.Group size="lg" controlId="email">
 
           <Form.Label>Username</Form.Label>
 
@@ -46,16 +48,34 @@ export default function Login() {
 
         </Form.Group>
 
+        <Form.Group size="lg" controlId="classCode">
+
+          <Form.Label>Class Code</Form.Label>
+
+          <Form.Control
+
+            autoFocus
+
+            type="classCode"
+
+            value={classCode}
+
+            onChange={(e) => setClassCode(e.target.value)}
+
+          />
+        </Form.Group>
+
+
         <Button className='Btn' block size="lg" type="submit" disabled={!validateForm()}>
 
-          Login
+          Register
 
         </Button>
 
-        <a href="/register">
+        <a href="/Login">
         <Button block size="lg">
         
-            Register
+            Back to Login
         
         </Button>
         </a>
