@@ -5,7 +5,7 @@
     margin: 0vw;
     padding: 5vw ;
     position:relative; 
-    /* position:relative for .prevBtn and .nextBtn position:absolute; */
+    border-color: firebrick;
 }
 .form-box input, textarea{
     display: block;
@@ -23,4 +23,5 @@
 
 .Btn{
     padding: .5rem .8rem .5rem .8rem;
+    border:0;
 }

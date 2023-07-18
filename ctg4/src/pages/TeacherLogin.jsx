@@ -10,6 +10,8 @@ export default function Login() {
 
   const [user, setUser] = useState("");
 
+  const [password, setPassword] = useState("");
+
   function validateForm() {
 
     return user.length > 0;
@@ -44,6 +46,18 @@ export default function Login() {
 
           />
 
+          <Form.control
+
+            autoFocus 
+
+            type="password"
+
+            value={password}
+
+            onChange={(e) => setPassword(e.target.value)}
+
+            />
+
         </Form.Group>
 
         <Button className='Btn' block size="lg" type="submit" disabled={!validateForm()}>
@@ -51,8 +65,8 @@ export default function Login() {
           Login
 
         </Button>
-
-        <a href="/register">
+        
+        <a href="/registert">
         
         <Button block size="lg">
         

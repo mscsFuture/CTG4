@@ -1,5 +1,7 @@
 
 import { Link } from "react-router-dom";
+import "../Login.css";
+
 
 const Header = () => {
   var points = 0;
@@ -37,11 +39,27 @@ const Header = () => {
               <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
           */}
+
           <div>Score: {points}</div>
+          
+          <a  href="/Login">
+            
+            <button className="Btn">
+            
+              Login
+            
+            </button>
+          
+          </a>
+          
           </div>
+        
         </div>
+      
       </nav>
+    
     )
+
 };
 
 export default Header;
