@@ -6,7 +6,7 @@ import Randomimage from "../components/randomimage"
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    if(event.target.answer.value != 8){
+    if(event.target.answer.value != answer){
         alert("Please try again!");
     }
     else{
@@ -31,6 +31,62 @@ const type = [
 
 const randomType=type[Math.floor(Math.random() * type.length)];
 
+
+var randomN1 = Math.floor(Math.random() * 10 + 1);
+var randomN2 = Math.floor(Math.random() * 10 + 1);
+var randomN3 = Math.floor(Math.random() * 10 + 1);
+var randomN4 = Math.floor(Math.random() * 10 + 1);
+var randomN5 = Math.floor(Math.random() * 10 + 1);
+
+var answer;
+
+if(randomShape == "rectangle"){
+    if(randomN1 > randomN2){
+        var temp = randomN1;
+        randomN1 = randomN2;
+        randomN2 = temp;
+    }
+    if(randomN1 == randomN2){
+        randomN2 += 4;
+    }
+}
+
+if(randomShape == "square"){
+    randomN2 = 0;
+    randomN3 = 0;
+    randomN4 = 0;
+    randomN5 = 0;
+
+    if(randomType == "Perimeter:"){
+        answer = randomN1*4;
+    }
+    else if(randomType == "Area:"){
+        answer = randomN1*randomN1;
+    }
+}
+else if(randomShape == "rectangle"){
+    randomN4 = 0;
+    randomN5 = 0;
+
+    if(randomType == "Perimeter:"){
+        answer= (randomN1*2)+(randomN2*2);
+    }
+    else if(randomType == "Area:"){
+        answer = randomN1*randomN2;
+    }
+}
+else if(randomShape == "triangle"){
+    randomN4 = 0;
+    randomN5 = 0;
+}
+else if(randomShape == "octagon"){
+    randomN2 = 0;
+    randomN3 = 0;
+    randomN4 = 0;
+    randomN5 = 0;
+}
+
+
 const Level1 = () => {
 
 
@@ -38,7 +94,7 @@ const Level1 = () => {
         <div className="form-box">
             <h1>Level 1</h1>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
-                        <Randomimage shape =  {randomShape}/>
+                        <Randomimage shape =  {randomShape} num1 = {randomN1} num2 = {randomN2}/>
                 </div>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
                     <form onSubmit={handleSubmit}>

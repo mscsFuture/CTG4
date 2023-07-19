@@ -41,6 +41,7 @@ const triangle = [
     tri1_eq_easy,
     tri17_right_easy
 ];
+
 var image;
 function randomimage(props) {
     if(props.shape == "octagon"){
@@ -54,11 +55,18 @@ function randomimage(props) {
 
     }
     else if(props.shape == "rectangle"){
-    image =   rectangle[Math.floor(Math.random() * rectangle.length)];
-
+        image =   rectangle[Math.floor(Math.random() * rectangle.length)];
+        
+    
     return (
-        <img src={image}width="300" height="250"/>
-
+        <div>
+            <div className="inline">
+                <img src={image}width="300" height="250"/>
+                <div className="fontsize">{props.num2}</div>
+            </div>
+            <div className="below">{props.num1}</div>
+            
+        </div>
 
     )
 
@@ -68,8 +76,12 @@ function randomimage(props) {
     else if(props.shape == "square"){
     image =   square[Math.floor(Math.random() * square.length)];
     return (
-        <img src={image}width="300" height="250"/>
-
+        <div>
+            <div className="inline">
+                <img src={image}width="300" height="250"/>
+                <div className="fontsize">{props.num1}</div>
+            </div>
+        </div>
 
     )
 
