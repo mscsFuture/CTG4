@@ -7,13 +7,13 @@ const Footer = () => {
 
         <div className="container-fluid">
             <Link className="navbar-brand" href="#">
-                <img src="../MUCS.png" alt="MUCS logo" width="35" height="35" classname="image-fluid" />
+                <img src="../MUCS.png" alt="MUCS logo" width="35" height="35" className="image-fluid" />
             </Link>
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <Link className="nav-link" href="/Terms">Terms of Use</Link>
                 </li>
-                <li classname="nav-item">
+                <li className="nav-item">
                     <Link className="nav-link" to="/Privacy">Privacy and Cookie Policy</Link>
                 </li>
                 <li className="nav-item">

@@ -3,10 +3,6 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Level1 from "./pages/Level1";
-import Level12 from "./level1/Level1_2";
-import Level13 from "./level1/Level1_3";
-import Level14 from "./level1/Level1_4";
-import Level15 from "./level1/Level1_5";
 import Level2 from "./level2/Level2_1";
 import Level22 from "./level2/Level2_2";
 import Level23 from "./level2/Level2_3";
@@ -30,10 +26,6 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="level1" element={<Level1 />} />
-        <Route path="level1_2" element={<Level12 />} />
-        <Route path="level1_3" element={<Level13 />} />
-        <Route path="level1_4" element={<Level14 />} />
-        <Route path="level1_5" element={<Level15 />} />
         <Route path="level2" element={<Level2 />} />
         <Route path="level2_2" element={<Level22 />} />
         <Route path="level2_3" element={<Level23 />} />

@@ -13,30 +13,83 @@ import square12_hard from "./images/squares/square12_hard.png";
 import tri_iso_med from "./images/triangles/tri_iso_med.png";
 import tri1_eq_easy from "./images/triangles/tri1_eq_easy.png";
 import tri17_right_easy from "./images/triangles/tri17_right_easy.png";
+import "../randomimage.css"
 
-const images = [
+const octagon = [
     octa1_easy,
     octa4_med,
     octa8_med,
     octa17_hard,
+];
+
+const rectangle = [
     rect4_easy,
     rect9_med,
     rect12_hard,
     rect18_hard,
+];
+
+const square = [
     sqaure9_med,
     square2_easy,
     square7_med,
     square12_hard,
+];
+
+const triangle = [
     tri_iso_med,
     tri1_eq_easy,
     tri17_right_easy
 ];
+var image;
+function randomimage(props) {
+    if(props.shape == "octagon"){
+    image =   octagon[Math.floor(Math.random() * octagon.length)];
+        return (
+            <img src={image}width="300" height="250"/>
 
-function randomimage() {
-    const randomNumber = Math.floor(Math.random() * images.length);
+
+        )
+
+
+    }
+    else if(props.shape == "rectangle"){
+    image =   rectangle[Math.floor(Math.random() * rectangle.length)];
+
+    return (
+        <img src={image}width="300" height="250"/>
+
+
+    )
+
+
+
+    }
+    else if(props.shape == "square"){
+    image =   square[Math.floor(Math.random() * square.length)];
+    return (
+        <img src={image}width="300" height="250"/>
+
+
+    )
+
+
+    }
+    else if(props.shape == "triangle"){
+    image =   triangle[Math.floor(Math.random() * triangle.length)];
+    return (
+        <img src={image}width="300" height="250"/>
+
+
+    )
+
+
+    }
     
     return (
-        <image src={images[randomNumber]}width="300" height="250"/>
+        <div>
+            <h1>Something went wrong</h1>
+        </div>
     )
 }
 

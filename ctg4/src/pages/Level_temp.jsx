@@ -1,32 +1,44 @@
 import react, { setState, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import Randomimage from "../components/randomimage"
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    if(event.target.answer.value != 12){
+    if(event.target.answer.value != 8){
         alert("Please try again!");
     }
     else{
         alert("Correct! +1 point");
-        window.location.href = "/Home";
+        Header.points += 1;
+        window.location.reload(false);
     }
     
 }
+
+const shapes = [
+    "square",
+    "rectangle",
+    "triangle",
+    "octagon"
+];
+
+const randomShape=shapes[Math.floor(Math.random() * shapes.length)];
 
 const Level1 = () => {
 
 
     return(
-        <div>
-            <h1>Level 1-5</h1>
+        <div className="form-box">
+            <h1>Level 1</h1>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
-                        <img src="../images/triangles/tri17_right_easy.png" alt="MUCS logo" width="300" height="250"/>
+                        <Randomimage shape =  {randomShape}/>
                 </div>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
                     <form onSubmit={handleSubmit}>
                         <label>
-                            <label style={{padding: 10}}>Perimeter:</label>
+                            <label style={{padding: 10}}>Periiimeter:</label>
                              
                             <input type="text" name="answer" />
                         </label>
