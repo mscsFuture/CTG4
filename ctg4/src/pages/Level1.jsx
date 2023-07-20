@@ -99,6 +99,11 @@ if(randomUnit == "none"){
 else{
     randomType = randomType + " in " + randomUnit + ":";
     answer = answer + " " + randomUnit;
+    randomN1 = randomN1 + " " + randomUnit;
+    randomN2 = randomN2 + " " + randomUnit;
+    randomN3 = randomN3 + " " + randomUnit;
+    randomN4 = randomN4 + " " + randomUnit;
+    randomN5 = randomN5 + " " + randomUnit;
 }
 
 
