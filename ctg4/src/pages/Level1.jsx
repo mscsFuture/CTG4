@@ -25,11 +25,18 @@ const shapes = [
 const randomShape=shapes[Math.floor(Math.random() * shapes.length)];
 
 const type = [
-    "Perimeter:",
-    "Area:",
+    "Perimeter",
+    "Area",
 ];
 
-const randomType=type[Math.floor(Math.random() * type.length)];
+const unit = ["in", "ft", "cm", "m", "none","none","none","none","none","none"];
+
+const randomUnit=unit[Math.floor(Math.random() * unit.length)];
+
+
+var randomType=type[Math.floor(Math.random() * type.length)];
+
+
 
 
 var randomN1 = Math.floor(Math.random() * 10 + 1);
@@ -57,10 +64,10 @@ if(randomShape == "square"){
     randomN4 = 0;
     randomN5 = 0;
 
-    if(randomType == "Perimeter:"){
+    if(randomType == "Perimeter"){
         answer = randomN1*4;
     }
-    else if(randomType == "Area:"){
+    else if(randomType == "Area"){
         answer = randomN1*randomN1;
     }
 }
@@ -68,10 +75,10 @@ else if(randomShape == "rectangle"){
     randomN4 = 0;
     randomN5 = 0;
 
-    if(randomType == "Perimeter:"){
+    if(randomType == "Perimeter"){
         answer= (randomN1*2)+(randomN2*2);
     }
-    else if(randomType == "Area:"){
+    else if(randomType == "Area"){
         answer = randomN1*randomN2;
     }
 }
@@ -85,6 +92,17 @@ else if(randomShape == "octagon"){
     randomN4 = 0;
     randomN5 = 0;
 }
+
+if(randomUnit == "none"){
+    randomType = randomType + ":";
+}
+else{
+    randomType = randomType + " in " + randomUnit + ":";
+    answer = answer + " " + randomUnit;
+}
+
+
+
 
 
 const Level1 = () => {
