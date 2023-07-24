@@ -1,7 +1,7 @@
 import react, { setState, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import Header from "../pages/Header";
+import Header from "./Header";
 import Randomimage from "../components/randomimage"
 
 const handleSubmit = (event) =>{
@@ -20,7 +20,10 @@ const handleSubmit = (event) =>{
 const shapes = [
     "square",
     "rectangle",
+    "octagon"
 ];
+
+const unit = ["in", "ft", "cm", "m", "none","none","none","none","none","none"];
 
 const randomShape=shapes[Math.floor(Math.random() * shapes.length)];
 
@@ -29,65 +32,43 @@ const type = [
     "Area",
 ];
 
-const unit = ["in", "ft", "cm", "m", "none","none","none","none","none","none"];
-
 const randomUnit=unit[Math.floor(Math.random() * unit.length)];
-
 
 var randomType=type[Math.floor(Math.random() * type.length)];
 
+if (randomShape == "octagon"){
+    randomType = "Perimeter";
+}
+    
 
+var randomN1 = Math.floor(Math.random() * (100 - 1) + 1);
+var randomN2 = Math.floor(Math.random() * (100 - 1) + 1);
+var randomN3 = Math.floor(Math.random() * 10);
+var randomN4 = Math.floor(Math.random() * 10);
+var randomN5 = Math.floor(Math.random() * 10);
 
-
-var randomN1 = Math.floor(Math.random(1,9) * 10);
-var randomN2 = Math.floor(Math.random(1,9) * 10);
-var randomN3 = Math.floor(Math.random() * 10 + 1);
-var randomN4 = Math.floor(Math.random() * 10 + 1);
-var randomN5 = Math.floor(Math.random() * 10 + 1);
+var temp;
 
 var answer;
 
-if (randomN1 == 0){
-    randomN1 = 1;
-}
-if (randomN2 == 0){
-    randomN2 = 1;
-}
-
-if(randomShape == "rectangle"){
-    if(randomN1 > randomN2){
-        var temp = randomN1;
-        randomN1 = randomN2;
-        randomN2 = temp;
-    }
-    if(randomN1 == randomN2){
-        randomN1 -= 1;
-    }
-}
+if(randomN1 > 10){
+    temp = randomN1 % 10;
+    randomN1 -= temp;
+}   
+if(randomN2 > 10){
+    temp = randomN2 % 10;
+    randomN2 -= temp;
+}   
 
 if(randomShape == "square"){
     randomN2 = 0;
     randomN3 = 0;
     randomN4 = 0;
     randomN5 = 0;
-
-    if(randomType == "Perimeter"){
-        answer = randomN1*4;
-    }
-    else if(randomType == "Area"){
-        answer = randomN1*randomN1;
-    }
 }
 else if(randomShape == "rectangle"){
     randomN4 = 0;
     randomN5 = 0;
-
-    if(randomType == "Perimeter"){
-        answer= (randomN1*2)+(randomN2*2);
-    }
-    else if(randomType == "Area"){
-        answer = randomN1*randomN2;
-    }
 }
 else if(randomShape == "triangle"){
     randomN4 = 0;
@@ -98,6 +79,12 @@ else if(randomShape == "octagon"){
     randomN3 = 0;
     randomN4 = 0;
     randomN5 = 0;
+}
+if(randomType == "Perimeter:"){
+    answer = randomN1 + randomN2 + randomN3 + randomN4 + randomN5;
+}
+else{
+    answer = randomN1 * randomN2 * randomN3 * randomN4 * randomN5;
 }
 
 if(randomUnit == "none"){
@@ -114,15 +101,12 @@ else{
 }
 
 
-
-
-
-const Level1 = () => {
+const Level2 = () => {
 
 
     return(
         <div className="form-box">
-            <h1>Level 1</h1>
+            <h1>Level 2</h1>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '35vh'}}>
                         <Randomimage shape =  {randomShape} num1 = {randomN1} num2 = {randomN2}/>
                 </div>
@@ -141,4 +125,4 @@ const Level1 = () => {
         </div>
     );
 };
-export default Level1;
+export default Level2;
