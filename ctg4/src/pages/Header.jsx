@@ -40,17 +40,21 @@ const Header = () => {
             </form>
           */}
 
-          <div>Score: {points}</div>
-          
-          <a  href="/Login">
+          {//<div>Score: {points}</div>
+}             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><Link className="dropdown-item" to="/Login">Student</Link></li>
+                  <li><hr className="dropdown-divider"/></li>
+                  <li><Link className="dropdown-item" to="/teacherlogin">Teacher</Link></li>
+                </ul>
+
+              </li>
+            </ul>
             
-            <button className="Btn">
-            
-              Login
-            
-            </button>
-          
-          </a>
           
           </div>
         

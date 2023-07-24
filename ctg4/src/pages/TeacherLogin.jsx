@@ -14,7 +14,7 @@ export default function Login() {
 
   function validateForm() {
 
-    return user.length > 0;
+    return user.length > 0 && password.length > 0;
 
   }
 
@@ -46,17 +46,13 @@ export default function Login() {
 
           />
 
-          <Form.control
-
-            autoFocus 
-
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            autoFocus
             type="password"
-
             value={password}
-
             onChange={(e) => setPassword(e.target.value)}
-
-            />
+          />
 
         </Form.Group>
 
@@ -65,8 +61,8 @@ export default function Login() {
           Login
 
         </Button>
-        
-        <a href="/registert">
+
+        <a href="/teacherregister">
         
         <Button block size="lg">
         

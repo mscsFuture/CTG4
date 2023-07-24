@@ -26,3 +26,8 @@
     padding: .5rem .8rem .5rem .8rem;
     border:0;
 }
+
+.right{
+    align-self: center;
+    transform: translateY(25%);
+}
