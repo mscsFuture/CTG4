@@ -48,7 +48,7 @@ function randomimage(props) {
     image =   octagon[Math.floor(Math.random() * octagon.length)];
         return (
             <div className="inline">
-                <img src={image}width="300" height="300"/>
+                <img src={image}/>
                 <div className="fontsize">{props.num1}</div>
             </div>
 
@@ -64,7 +64,7 @@ function randomimage(props) {
     return (
         <div>
             <div className="inline">
-                <img src={image}className="img"/>
+                <img src={image}/>
                 <div className="fontsize">{props.num2}</div>
             </div>
             <div className="below">{props.num1}</div>
@@ -81,7 +81,7 @@ function randomimage(props) {
     return (
         <div>
             <div className="inline">
-                <img src={image}width="300" height="300"/>
+                <img src={image}/>
                 <div className="fontsize">{props.num1}</div>
             </div>
         </div>
@@ -93,7 +93,7 @@ function randomimage(props) {
     else if(props.shape == "triangle"){
     image =   triangle[Math.floor(Math.random() * triangle.length)];
     return (
-        <img src={image}width="300" height="300"/>
+        <img src={image}/>
 
 
     )

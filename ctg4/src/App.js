@@ -11,7 +11,7 @@ import Level34 from "./level3/Level3_4";
 import Level35 from "./level3/Level3_5";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import TeacherLogin from "./pages/Teacherlogin";
+import TeacherLogin from "./pages/TeacherLogin";
 
 
 export default function App() {
