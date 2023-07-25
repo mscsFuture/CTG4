@@ -36,7 +36,7 @@
 }
 
 img{
-    max-width: 50%;
+    max-width: 275px;
     height: auto;
     width: auto\9; /* ie8 */
 }

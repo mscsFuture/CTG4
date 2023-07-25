@@ -15,6 +15,10 @@ import tri1_eq_easy from "./images/triangles/tri1_eq_easy.png";
 import tri17_right_easy from "./images/triangles/tri17_right_easy.png";
 import "../randomimage.css"
 
+
+
+
+
 const octagon = [
     octa1_easy,
     octa4_med,

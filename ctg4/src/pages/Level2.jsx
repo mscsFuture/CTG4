@@ -46,6 +46,9 @@ var randomN2 = Math.floor(Math.random() * (100 - 1) + 1);
 var randomN3 = Math.floor(Math.random() * 10);
 var randomN4 = Math.floor(Math.random() * 10);
 var randomN5 = Math.floor(Math.random() * 10);
+var randomN6 = 0;
+var randomN7 = 0;
+var randomN8 = 0;
 
 var temp;
 
@@ -65,10 +68,24 @@ if(randomShape == "square"){
     randomN3 = 0;
     randomN4 = 0;
     randomN5 = 0;
+
+    if(randomType == "Perimeter"){
+        answer = randomN1*4;
+    }
+    else if(randomType == "Area"){
+        answer = randomN1*randomN1;
+    }
 }
 else if(randomShape == "rectangle"){
     randomN4 = 0;
     randomN5 = 0;
+
+    if(randomType == "Perimeter"){
+        answer= (randomN1*2)+(randomN2*2);
+    }
+    else if(randomType == "Area"){
+        answer = randomN1*randomN2;
+    }
 }
 else if(randomShape == "triangle"){
     randomN4 = 0;
@@ -79,12 +96,10 @@ else if(randomShape == "octagon"){
     randomN3 = 0;
     randomN4 = 0;
     randomN5 = 0;
-}
-if(randomType == "Perimeter:"){
-    answer = randomN1 + randomN2 + randomN3 + randomN4 + randomN5;
-}
-else{
-    answer = randomN1 * randomN2 * randomN3 * randomN4 * randomN5;
+
+    if(randomType == "Perimeter"){
+        answer = randomN1*8;
+    }
 }
 
 if(randomUnit == "none"){
